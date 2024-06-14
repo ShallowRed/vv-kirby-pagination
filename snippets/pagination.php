@@ -10,7 +10,6 @@
       <?php
       snippet('pagination-item', [
         'label' => $prevLabel,
-        'iconClass' => 'i-ri-arrow-left-line',
         'href' => $prev->url(),
         'attrs' => [
           'class' => 'pagination__item pagination__item--prev',
@@ -24,7 +23,6 @@
       <?php
       snippet('pagination-item', [
         'label' => $nextLabel,
-        'iconClass' => 'i-ri-arrow-right-line',
         'href' => $next->url(),
         'attrs' => [
           'class' => 'pagination__item pagination__item--next',
