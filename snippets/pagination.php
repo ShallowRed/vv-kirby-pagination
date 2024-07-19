@@ -6,6 +6,7 @@
         $attrs ?? []
     ),
 ); ?>>
+  <div class="pagination__inner">
     <?php if ($hasPrev ?? false) : ?>
       <?php
       snippet('pagination-item', [
@@ -32,4 +33,5 @@
     <?php else : ?>
       <div></div>
     <?php endif; ?>
+    </div>
 </nav>
