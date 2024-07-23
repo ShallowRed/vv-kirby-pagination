@@ -1,12 +1,2 @@
-<div>
-  <?php echo Html::tag(
-      'p',
-      [
-        Html::a(
-            $href,
-            [$label . Html::span('', ['class' => 'pagination__item-icon'])],
-            $attrs
-        )
-      ],
-  ); ?>
-</div>
+<p <?php echo attr($attrs ?? []); ?>>
+<?php echo Html::a($href, [$label . Html::span('', ['class' => 'pagination__item-icon'])]); ?>

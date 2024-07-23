@@ -1,14 +1,12 @@
-<nav <?php echo attr(
-    A::extend(
-        [
-          'class' => "pagination"
-        ],
-        $attrs ?? []
-    ),
-); ?>>
+<nav <?php
+echo attr(A::extend([
+    'class' => "pagination"
+], $attrs ?? []));
+?>
+>
   <div class="pagination__inner">
     <?php if ($hasPrev ?? false) : ?>
-      <?php
+    <?php
       snippet('pagination-item', [
         'label' => $prevLabel,
         'href' => $prev->url(),
@@ -18,10 +16,10 @@
       ]);
       ?>
     <?php else : ?>
-      <div></div>
+    <div class="pagination__item"></div>
     <?php endif; ?>
     <?php if ($hasNext ?? false) : ?>
-      <?php
+    <?php
       snippet('pagination-item', [
         'label' => $nextLabel,
         'href' => $next->url(),
@@ -31,7 +29,7 @@
       ]);
       ?>
     <?php else : ?>
-      <div></div>
+    <div class="pagination__item"></div>
     <?php endif; ?>
-    </div>
+  </div>
 </nav>
